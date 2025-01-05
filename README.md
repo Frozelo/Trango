@@ -1,1 +1,1 @@
-Trango is simple CLI translator
+Trango is simple the CLI translator
