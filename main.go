@@ -8,13 +8,18 @@ import (
 )
 
 func main() {
-	testCmd := cobra.Command{
-		Use: "test",
+	rootCmd := cobra.Command{
+		Use:   "trango",
+		Short: "trango — простой переводчик с одного языка на другой",
+		Long: `trango — это утилита командной строки,
+				которая позволяет переводить текст с одного языка на другой.
+				Для примера показана псевдо-функция перевода.`,
 		Run: func(cmd *cobra.Command, args []string) {
-			fmt.Println("Hello")
+			fmt.Println("Добро пожаловать в CLI-translator!")
+			fmt.Println("Попробуйте команду 'cli-translator translate --help'")
 		},
 	}
-	if err := testCmd.Execute(); err != nil {
+	if err := rootCmd.Execute(); err != nil {
 		log.Fatal(err)
 	}
 }
